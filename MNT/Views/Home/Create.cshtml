@@ -1,0 +1,15 @@
+﻿@page
+@model MNT.Models.User
+@{
+}
+<h4>dodaj korisnika </h4><br />
+@*<form action="/Home/Create" method="post"*@
+@using (Html.BeginForm(new { @class = "form-group", role = "form" }))
+{
+    @Html.LabelFor(k => k.Username, new { @class = "label label-info" }) @Html.TextBoxFor(k => k.Username, new { @class = "form-control" })
+    @Html.LabelFor(k => k.Password, new { @class = "label label-info" }) @Html.TextBoxFor(k => k.Password, new { @class = "form-control" })
+
+
+    <button class="btn btn-sm btn-default" type="submit">Potvrdi</button>
+}
+   

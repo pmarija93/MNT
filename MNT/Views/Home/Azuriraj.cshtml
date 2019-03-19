@@ -1,0 +1,15 @@
+﻿@page
+@model MNT.Models.Article
+@{
+}
+<h4>azuriraj artikal </h4><br />
+@*<form action="/Home/Azuriraj" method="post"*@
+@using (Html.BeginForm(new { @class = "form-group", role = "form" }))
+{
+    @Html.LabelFor(k => k.ArticleName, new { @class = "label label-info" }) @Html.TextBoxFor(k => k.ArticleName, new { @class = "form-control" })
+    @Html.LabelFor(k => k.ArticleCode, new { @class = "label label-info" }) @Html.TextBoxFor(k => k.ArticleCode, new { @class = "form-control" })
+
+
+    <button class="btn btn-sm btn-default" type="submit">Potvrdi</button>
+}
+

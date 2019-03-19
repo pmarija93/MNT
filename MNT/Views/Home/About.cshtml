@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ArticleViewModel>
+@{
+    ViewData["Title"] = "About";
+}
+
+
+
+<h2>@ViewData["User."]</h2>
+
+<h3>@ViewData["Message"]</h3>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Sifra</th>
+                <th>Ime</th>
+                <th>Azuriranje</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.ArticleCode</td>
+                    <td>@item.ArticleName</td>
+                    <td>  <a asp-area="" asp-controller="Home" asp-action="Azuriraj" asp-route-id=@item.ID> Azuriraj   </a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <button type="button" class="ids" id="btnpartial" value="showdetail" onclick="getview()"> promjeni</button>
+
+
+</div>
+<p>Uspjesno ste se logirali </p>
+
+
+
+
+
+
+<table>
+    <tr>
+        <th>
+
+
+
+        </th>
+        <th>kod</th>
+        <th>ime</th>
+
+    </tr>
+
+</table>
+
+

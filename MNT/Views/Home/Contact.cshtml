@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width" />
+    <title>Login</title>
+    <style>
+
+        #login-div {
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            border: 1px solid #ccc;
+            padding: 10px 10px;
+        }
+        .field-validation-error{ color:red;}
+    </style>
+</head>
+<body>
+    <h2>@ViewData["Title"]</h2>
+    <h3>@ViewData["Message"]</h3>
+    <address>
+        One Microsoft Way<br />
+        Redmond, WA 98052-6399<br />
+        <abbr title="Phone">P:</abbr>
+        425.555.0100
+    </address>
+    <address>
+        <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
+        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+    </address>
+    @model MNT.Models.UserViewModel
+    @{ Layout = null;
+    }
+    
+
+        }
+        @using (Html.BeginForm("autorizacija", "Home", FormMethod.Post))
+        {
+            <div class="container login-container">
+
+                <div class="row">
+
+                    <div class="col-md-6 login-form-1">
+
+                        <h3>Login Form 1</h3>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Email *" value="" /> @Html.EditorFor(Model => Model.Username)
+
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Your Password *" value="" /> @Html.EditorFor(Model => Model.Password)
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="btnForgetPwd">Forget Password?</a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 login-form-2">
+                        <div class="login-logo">
+                            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <script>src = "https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"</script>
+        <script>src = "https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"</script>
+        <script>src = "https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.9/jquery.validate.unobtrusive.min.js"</script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!------ Include the above in your HEAD tag ---------->
+
+
+
+    </body>
+</html>
